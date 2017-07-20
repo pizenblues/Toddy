@@ -8,7 +8,7 @@
 - [ ] dividir vistas de completados y pendientes
 - [ ] morirme*
 
-*** = working on this**
+* = working on this
 
 ## Build Setup
 

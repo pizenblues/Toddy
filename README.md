@@ -1,6 +1,13 @@
-# to-do
+# The to-do list
 
 > a plain-ass todo list
+
+- Hacer que todo se guarde en un json
+- cambiar orden (arrastrando)
+- Dialogo de "marico, seguro quieres borrar todo?"
+- hacer to-dos editables
+- dividir vistas de completados y pendientes
+- morirme
 
 ## Build Setup
 

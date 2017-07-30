@@ -1,44 +1,51 @@
 <template>
   <div class="container" id="todo">
-    <section class="panel">
+    <section class="panel head">
       <input type="checkbox" id="mark-all" v-bind:checked="areAllSelected" 
-      v-on:click="selectAll">
+      v-on:click="selectAll" class="checkbox">
       <input type="text" autofocus class="text-input" placeholder="what u wanna do?"
-      v-model="newTask" v-on:keyup.enter="addTask">
+      v-model="newTask" v-on:keyup.enter="addTask" id="mainInput">
       <button class="deleteAll" v-on:click="clearList">
-        Limpiar
-      </button>
+        X
+      </button> 
     </section>
 
-    <ul class="list">
-      <li v-for="task in taskList" v-bind:class="{done: task.checked}">
-        <input type="checkbox" class="checkbox" v-model="task.checked"
-        v-on:click="checkTask(task)">
-        <label for="checkbox">
-        <!--
-          <input type="text" :value="task.text" class="singleTask" :disabled="!task._editting">
-        -->
-          <input type="text" :value="task.text" class="singleTask" v-on:keyup.enter="editTask(task)"
-          :disabled="task.checked" v-model="task.text">
-        </label>
-        <!--
-        <button class="edit" v-on:click="editTask(task)" v-if="!task.checked">
-          editar
-        </button>
-        -->
-        <button class="delete" v-on:click="removeTask(task)">
-          borrar
-        </button>
-      </li>
+      <ul class="list">
+      <draggable :list="taskList" :options="{group:'taskList'}" :move="dragStart(added)" v-model="taskList">
+        <li v-for="task in taskList" v-bind:class="{done: task.checked}" :key="task.id" class="task">
+          <input type="checkbox" class="checkbox" v-model="task.checked"
+          v-on:click="checkTask(task)">
+          <label for="checkbox">
+          <!--
+            <input type="text" :value="task.text" class="singleTask" :disabled="!task._editting">
+          -->
+            <input type="text" :value="task.text" class="singleTask" v-on:keyup.enter="editTask(task)"
+            :disabled="task.checked" v-model="task.text">
+          </label>
+          <!--
+          <button class="edit" v-on:click="editTask(task)" v-if="!task.checked">
+            editar
+          </button>
+          -->
+          <button class="delete" v-on:click="removeTask(task)">
+            X
+          </button>
+        </li>
+      </draggable>
     </ul>
   </div>
 </template>
 
 <script>
 import PouchDB from 'pouchdb-browser'
+import draggable from 'vuedraggable'
+
 const db = new PouchDB('todos')
 export default {
   name: 'list',
+  components: {
+    draggable
+  },
   data () {
     return {
       loading: true,
@@ -50,6 +57,21 @@ export default {
     this.getTasks()
   },
   methods: {
+
+    dragStart (evt) {
+      //var indice = index.draggedContext.taskList.task
+      //var indice = this.taskList.indexOf(task)
+      //console.log(indice)
+      //var futureIndex = this.targetElement = evt.relatedContext.element
+      var futureIndex = evt.draggedContext.element
+      var index = this.taskList.indexOf(futureIndex)
+      //console.log(index)
+      console.log(index)
+    },
+
+    dragEnd(){
+      console.log("end")
+    },
     
     getTasks () {
       db.allDocs({include_docs: true}, (err, response) => {
@@ -97,11 +119,18 @@ export default {
 
     removeTask (task) {
       var index = this.taskList.indexOf(task)
+      if (!(confirm("Seguro?"))){
+        return
+      }
       db.remove(task)
       this.taskList.splice(index, 1)
+      console.log("removed")
     },
 
     clearList () {
+      if (!(confirm("Seguro?"))){
+        return
+      }
       for (var i = 0; i < this.taskList.length; i++){
         db.remove(this.taskList[i])
       }
@@ -136,8 +165,8 @@ export default {
 
     body {
     line-height: 1;
-    font-family: "Lato", sans-serif;
-    background-color: #EFF1F2;
+    font-family: 'Nunito', sans-serif;
+    background-color: #f8f8ff
   }
 
   .container {
@@ -152,17 +181,20 @@ export default {
     align-items: center;
     justify-content: space-between;
     list-style-type: none;
-    padding: 10px;
-    border-bottom: 1px solid #efefef;
-    background-color: #E7E8EB;
+    padding: 10px 20px 10px 60px;
+    border-bottom: 2px solid #F9F9F9;
+    background: white;
   }
 
   .text-input {
-    border: 1px solid #dedede;
-    padding-left: 10px;
-    width: 70%;
+    border: 2px solid lightblue;
+    padding: 10px 5px;
+    width: 85%;
     height: 35px;
-    color: #555;
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
   }
 
   button {
@@ -172,26 +204,23 @@ export default {
     outline: 0;
     height: 38px;
     cursor: pointer;
-    font-size: 10px;
-    width: 60px;
+    font-size: 14px;  
   }
 
   /* Task  area */
 
-  .list li .delete .edit {
-    border: none;
-    color: white;
-    border-radius: 50%;
+  .list li .delete {
+    visibility: hidden;
   }
 
-/*
+
   .list li:hover > .delete {
     visibility: visible;
   }
-*/
+
   .list label {
     display: inline-block;
-    width: 70%;
+    width: 85%;
     font-size: 18px;
     line-height: 24px;
     z-index: 2;
@@ -202,6 +231,20 @@ export default {
     text-decoration: line-through;
   }
 
+  .list input[type=text]{
+    width: 100%;
+    padding-left: 10px;
+    border-style: none;
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .list input[type=text]:disabled{
+    background: white;
+  }
+
   /* Media Queries */
 
   @media screen and (max-width: 768px) {
@@ -209,8 +252,6 @@ export default {
       width: 90%;
       max-width: 90%;
     }
-    button {
-      width: 80px;
-    }
   }
+
 </style>

@@ -2,12 +2,16 @@
 > a plain-ass todo list
 
 - [x] Hacer que todo se guarde en un json
-- [ ] cambiar orden (arrastrando)
-- [ ] Dialogo de "marico, seguro quieres borrar todo?"*
+- [ ] cambiar orden (arrastrando)(*)
+- [x] Dialogo de "marico, seguro quieres borrar todo?"
 - [x] hacer to-dos editables
 - [ ] dividir vistas de completados y pendientes
 
-* = working on this
+**issues**
+- Document update conflict en los checklist.
+- UI: aviso de editado exitosamente.
+
+(*) = working on this
 
 ## Build Setup
 

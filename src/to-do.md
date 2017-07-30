@@ -1,4 +1,0 @@
-- hacer que guarde todo en un jason
-- hacer modo archivados(completados)}
-- editar
-- deshacer?

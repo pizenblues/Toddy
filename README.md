@@ -3,10 +3,9 @@
 
 - [x] Hacer que todo se guarde en un json
 - [ ] cambiar orden (arrastrando)
-- [ ] Dialogo de "marico, seguro quieres borrar todo?"
-- [ ] hacer to-dos editables*
+- [ ] Dialogo de "marico, seguro quieres borrar todo?"*
+- [x] hacer to-dos editables
 - [ ] dividir vistas de completados y pendientes
-- [ ] morirme*
 
 * = working on this
 

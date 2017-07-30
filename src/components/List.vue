@@ -15,11 +15,17 @@
         <input type="checkbox" class="checkbox" v-model="task.checked"
         v-on:click="checkTask(task)">
         <label for="checkbox">
+        <!--
           <input type="text" :value="task.text" class="singleTask" :disabled="!task._editting">
+        -->
+          <input type="text" :value="task.text" class="singleTask" v-on:keyup.enter="editTask(task)"
+          :disabled="task.checked" v-model="task.text">
         </label>
+        <!--
         <button class="edit" v-on:click="editTask(task)" v-if="!task.checked">
           editar
         </button>
+        -->
         <button class="delete" v-on:click="removeTask(task)">
           borrar
         </button>
@@ -30,15 +36,12 @@
 
 <script>
 import PouchDB from 'pouchdb-browser'
-//importa pouchdb
 const db = new PouchDB('todos')
-//crea una nueva bd
 export default {
   name: 'list',
   data () {
     return {
       loading: true,
-      //pouchdb es async
       newTask: '',
       taskList: []
     }
@@ -46,13 +49,10 @@ export default {
   mounted () {
     this.getTasks()
   },
-  // lol que?
   methods: {
     
-    //jala todo de la db y lo muestra
     getTasks () {
       db.allDocs({include_docs: true}, (err, response) => {
-        //The include_docs option tells PouchDB to give us the data within each document
         if (err) {
           throw err
         }
@@ -63,20 +63,28 @@ export default {
       })
     },
 
-    //marcar tarea como hecha
+    editTask (task) {
+      //this.$set(task, '_editting', true)
+      db.get(task._id).then(function(originalTask){
+        task._rev = originalTask._rev
+        return db.put(task);
+      }).then(function(response){
+        console.log("editado")
+      }).catch(function (err){
+        console.log(err)
+      })
+    },
+
     checkTask (task) {
       var index = this.taskList.indexOf(task)
       db.put(task)
     },
 
-    //agregar tarea
     addTask () {
       var task = this.newTask.trim()
       if (!task) {
         return
       }
-      // si no hay tareas, no hay nada que hacer
-      // si hay, guarda en la db post()
       db.post({
         text: task,
         checked: false
@@ -87,36 +95,19 @@ export default {
       })
     },
 
-    //borrar tarea
     removeTask (task) {
       var index = this.taskList.indexOf(task)
       db.remove(task)
-      //pretty straightforward
       this.taskList.splice(index, 1)
-      //borra elemento del array con splice
     },
 
-    //editar tarea
-    editTask (task) {
-      this.$set(task, '_editting', true)
-      //task._editting = true
-      var index = this.taskList.indexOf(task)
-      console.log(task)
-      
-    },
-
-    //borra todos los elementos. naguara im awesome
     clearList () {
       for (var i = 0; i < this.taskList.length; i++){
         db.remove(this.taskList[i])
-        //recorre el array desde 0 hasta length y
-        //borra el elemento
       }
       this.taskList = []
-      //cambia el array por uno vacio
     },
 
-    //marca todo como listo
     selectAll: function (task) {
       var targetValue = !this.areAllSelected
       for (var i = 0; i < this.taskList.length; i++) {

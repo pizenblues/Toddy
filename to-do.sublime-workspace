@@ -1,0 +1,899 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"che",
+				"checked"
+			],
+			[
+				"file",
+				"fileContents"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"backg",
+				"background"
+			],
+			[
+				"margin-",
+				"margin-right"
+			],
+			[
+				"flex",
+				"flex-direction"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"paddin",
+				"padding"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"descrip",
+				"descropcion1"
+			],
+			[
+				"cas",
+				"casodeuso"
+			],
+			[
+				"drop",
+				"dropdown"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"con",
+				"context"
+			],
+			[
+				"hora",
+				"horario_seccion"
+			],
+			[
+				"profes",
+				"profesor_selected"
+			],
+			[
+				"secci",
+				"seccion_profesor"
+			],
+			[
+				"creditos",
+				"creditos_data"
+			],
+			[
+				"min",
+				"minlength\tAttr"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"horario",
+				"horario_dia"
+			],
+			[
+				"insc",
+				"inscription_query"
+			],
+			[
+				"hs_",
+				"hs_seccion"
+			],
+			[
+				"estudian",
+				"estudiante_seccion"
+			],
+			[
+				"esu",
+				"estudiante"
+			],
+			[
+				"check",
+				"check_data"
+			],
+			[
+				"carga",
+				"carga_actual"
+			],
+			[
+				"est",
+				"estudiante_data"
+			],
+			[
+				"estu",
+				"estudiante_seccion"
+			],
+			[
+				"align",
+				"align-content"
+			],
+			[
+				"materia",
+				"materia_nombre"
+			],
+			[
+				"mat",
+				"materias"
+			],
+			[
+				"seccion",
+				"seccion_id"
+			],
+			[
+				"login",
+				"loginfo"
+			],
+			[
+				"horari",
+				"horario_id"
+			],
+			[
+				"es",
+				"estudiante_usuario"
+			],
+			[
+				"mate",
+				"materia"
+			],
+			[
+				"paddi",
+				"padding"
+			],
+			[
+				"id",
+				"id_tratamiento"
+			],
+			[
+				"ci_",
+				"ci_usuario"
+			],
+			[
+				"materiales",
+				"materiales_consulta"
+			],
+			[
+				"ci_us",
+				"ci_usuario_paciente"
+			],
+			[
+				"sh",
+				"sh_seccion"
+			],
+			[
+				"mysql_fet",
+				"mysql_fetch_assoc"
+			],
+			[
+				"usua",
+				"usuario_id"
+			],
+			[
+				"usu",
+				"usuario_id"
+			],
+			[
+				"perfi",
+				"perfil_usuario"
+			],
+			[
+				"em",
+				"em_estudiante"
+			],
+			[
+				"pro",
+				"profesor_cedula"
+			],
+			[
+				"mater",
+				"materia_id"
+			],
+			[
+				"ma",
+				"materia_id"
+			],
+			[
+				"secc",
+				"seccion_id"
+			],
+			[
+				"e",
+				"estudiante_carrera"
+			],
+			[
+				"estud",
+				"estudiante_id"
+			],
+			[
+				"coordian",
+				"coordinador_carrera"
+			],
+			[
+				"pensum",
+				"pensum_id"
+			],
+			[
+				"mae",
+				"materia_pensum"
+			],
+			[
+				"carrera",
+				"carrera_id"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"box-s",
+				"box-shadow"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"ins",
+				"inscripcion"
+			],
+			[
+				"asi",
+				"seccion_asignatura"
+			],
+			[
+				"dis",
+				"seccion_distintivo"
+			],
+			[
+				"as",
+				"asignatura_id"
+			],
+			[
+				"il",
+				"inline-block"
+			],
+			[
+				"spac",
+				"space-between"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"border",
+				"border-style"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"shadow",
+				"box-shadow"
+			],
+			[
+				"wid",
+				"width"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/components/List.vue",
+			"settings":
+			{
+				"buffer_size": 4533,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 704,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 235.0,
+		"last_filter": "ja",
+		"selected_items":
+		[
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"vue",
+				"Set Syntax: Vue Component"
+			],
+			[
+				"toggle",
+				"View: Toggle Menu"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"HTML",
+				"Set Syntax: HTML"
+			],
+			[
+				"SQL",
+				"Set Syntax: SQL"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"packp",
+				"Package Control: List Packages"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"e",
+				"Package Control: Enable Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/zookid/Documents/Code/to-do",
+		"/C/Users/zookid/Documents/Code/to-do/src",
+		"/C/Users/zookid/Documents/Code/to-do/src/components"
+	],
+	"file_history":
+	[
+		"/C/Users/zookid/Documents/Code/to-do/README.md",
+		"/C/Users/zookid/Documents/Documentos/zoo/28072017.txt",
+		"/C/Users/zookid/Documents/Code/to-do/src/router/index.js",
+		"/C/Users/zookid/Documents/Code/to-do/src/components/List.vue",
+		"/C/Users/zookid/Documents/Code/to-do/to-do.sublime-project",
+		"/C/Users/zookid/Documents/Documentos/HIMYM Quotes.md",
+		"/C/Users/zookid/Music/+/Love_-_Da_Capo-1967-OBSERVER/love - da capo.txt",
+		"/C/Users/zookid/Music/+/Jacques_Brel_-_CD_9_-_Olympia_64-1964-OBSERVER/Jacques brel - Olympia64.txt",
+		"/C/wamp64/www/finder.js",
+		"/C/Users/zookid/Downloads/adopta un civil2.txt",
+		"/C/wamp64/www/test.json",
+		"/C/Users/zookid/nodeSchool/ai2.js",
+		"/C/Users/zookid/nodeSchool/ai.js",
+		"/C/wamp64/www/planificacion-academica/public/estudiante/perfil.php",
+		"/C/wamp64/www/planificacion-academica/public/estudiante/inscribir.php",
+		"/C/wamp64/www/planificacion-academica/sql/database.sql",
+		"/C/wamp64/www/planificacion-academica/public/estudiante/materias.php",
+		"/C/wamp64/www/planificacion-academica/sql/insert.sql",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/presentacion.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/modeladoreglas.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/modeladoProcesos.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/customStyle.css",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/asasa/diagramacasosdeuso.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/asasa/diagramadecomponentes.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/asasa/diagramadedespliegue.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/asasa/diagramasdeclase.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/asasa/diagramasecuencia.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/asasa/entidadrelacion.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/asasa/interfaces.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/asasa/modeladoActores.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/asasa/modeladoEventos.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/asasa/modeladoObjetivos.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/asasa/modeladoProcesos.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/asasa/modeladoreglas.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/asasa/patrondediseno.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/diagramacasosdeuso.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/descripcion2.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/descripcion1.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/basededatos.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/sql.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/patrondediseno.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/modeladoObjetivos.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/modeladoEventos.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/modeladoActores.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/interfaces.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/entidadrelacion.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/diagramasecuencia.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/diagramasdeclase.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/diagramadedespliegue.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/diagramadecomponentes.html",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/customReveal.js",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/reveal.js/plugin/zoom-js/zoom.js",
+		"/C/Users/zookid/Downloads/proyectoSII/presentacion/previews/customReveal.js",
+		"/C/Users/zookid/Downloads/presentacionv2/customReveal.js",
+		"/C/Users/zookid/Downloads/presentacionv2/presentacion.html",
+		"/C/Users/zookid/Downloads/presentacion/customStyle.css",
+		"/C/Users/zookid/Downloads/presentacion/presentacion.html",
+		"/C/Users/zookid/Downloads/presentacion/bk.html",
+		"/C/Users/zookid/Downloads/presentacion/previews/patrondediseno.html",
+		"/C/Users/zookid/Downloads/presentacion/previews/basededatos.html",
+		"/C/Users/zookid/Downloads/presentacion/previews/entidadrelacion.html",
+		"/C/Users/zookid/Downloads/presentacion/previews/sql.html",
+		"/C/Users/zookid/Downloads/presentacion/previews/interfaces.html",
+		"/C/Users/zookid/Downloads/clinica/doctor-pacientes.html",
+		"/C/Users/zookid/Downloads/presentacion/previews/descripcion1.html",
+		"/C/Users/zookid/Downloads/presentacion/previews/descripcion2.html",
+		"/C/Users/zookid/Downloads/presentacion/previews/diagramacasosdeuso.html",
+		"/C/Users/zookid/Downloads/presentacion/previews/diagramadecomponentes.html",
+		"/C/Users/zookid/Downloads/presentacion/previews/diagramadedespliegue.html",
+		"/C/Users/zookid/Downloads/presentacion/previews/diagramasdeclase.html",
+		"/C/Users/zookid/Downloads/presentacion/previews/modeladoActores.html",
+		"/C/Users/zookid/Downloads/presentacion/previews/modeladoEventos.html",
+		"/C/Users/zookid/Downloads/presentacion/previews/modeladoObjetivos.html",
+		"/C/Users/zookid/Downloads/presentacion/previews/modeladoProcesos.html",
+		"/C/Users/zookid/Downloads/presentacion/customReveal.js",
+		"/C/Users/zookid/Downloads/clinica/paciente-crear-cita.html",
+		"/C/Users/zookid/Downloads/clinica/doctor-historia.html",
+		"/C/Users/zookid/Downloads/clinica/paciente-citas.html",
+		"/C/Users/zookid/Downloads/clinica/custom.css",
+		"/C/Users/zookid/Downloads/clinica/paciente-cita.html",
+		"/C/Users/zookid/Downloads/clinica/doctor-cita.html",
+		"/C/Users/zookid/Downloads/clinica/doctor-citas.html",
+		"/C/Users/zookid/Downloads/clinica/doctor-paciente.html",
+		"/C/Users/zookid/Downloads/clinica/paciente/paciente-dashboard.html",
+		"/C/Users/zookid/Downloads/clinica/paciente/paciente-login.html",
+		"/C/Users/zookid/Downloads/clinica/doctor-historia2.html",
+		"/C/Users/zookid/Downloads/clinica/doctor-historia3.html",
+		"/C/Users/zookid/Downloads/clinica/bk/doctor-historiafull.html",
+		"/C/Users/zookid/Downloads/clinica/adm/admin-dashboard.html",
+		"/C/Users/zookid/Downloads/clinica/adm/admin-login.html",
+		"/C/Users/zookid/Downloads/clinica/doctor-dashboard.html",
+		"/C/Users/zookid/Downloads/clinica/doctor-login.html",
+		"/C/Users/zookid/Documents/sistemas 2/clinica odontologica/ClinicaOdontologicaWebApp/maquetado/vistapaciente.html",
+		"/C/Users/zookid/Downloads/clinica/paciente-dashboard.html",
+		"/C/Users/zookid/Downloads/clinica/admindashboard.html",
+		"/C/Users/zookid/Downloads/clinica/login.html",
+		"/C/Users/zookid/Downloads/presentacion sistemas ii/presentacion.html",
+		"/C/Users/zookid/Downloads/electron-quick-start-master/index.html",
+		"/C/Users/zookid/Downloads/electron-quick-start-master/modeladoProcesos.html",
+		"/C/Users/zookid/Downloads/electron-quick-start-master/modeladoObjetivos.html",
+		"/C/Users/zookid/Downloads/electron-quick-start-master/diagramasdeclase.html",
+		"/C/Users/zookid/Downloads/electron-quick-start-master/diagramadedespliegue.html",
+		"/C/Users/zookid/Downloads/electron-quick-start-master/diagramadecomponentes.html",
+		"/C/Users/zookid/Downloads/electron-quick-start-master/descripcion1.html",
+		"/C/Users/zookid/Downloads/electron-quick-start-master/descripcion2.html",
+		"/C/Users/zookid/Downloads/electron-quick-start-master/diagramacasosdeuso.html",
+		"/C/Users/zookid/Downloads/presentacion sistemas ii/customStyle.css",
+		"/C/Users/zookid/Downloads/presentacion sistemas ii/reveal.js/css/theme/moon.css",
+		"/C/Users/zookid/Downloads/presentacion sistemas ii/previews/diagramadedespliegue.html",
+		"/C/Users/zookid/Downloads/presentacion sistemas ii/previews/descripcion2.html",
+		"/C/Users/zookid/Downloads/presentacion sistemas ii/previews/modeladoObjetivos.html",
+		"/C/Users/zookid/Downloads/presentacion sistemas ii/previews/modeladoProcesos.html",
+		"/C/Users/zookid/Downloads/presentacion sistemas ii/customReveal.js",
+		"/C/Users/zookid/Downloads/presentacion sistemas ii/reveal.js/css/theme/league.css",
+		"/C/wamp64/www/planificacion-academica/public/admin/materia_editar.php",
+		"/C/wamp64/www/planificacion-academica/README.md",
+		"/C/wamp64/www/planificacion-academica/public/admin/seccion_horario_join.php",
+		"/C/wamp64/www/planificacion-academica/public/admin/seccion_crear_horario.php",
+		"/C/wamp64/www/planificacion-academica/public/admin/seccion_crear.php",
+		"/C/wamp64/www/planificacion-academica/public/admin/materia_lista.php",
+		"/C/wamp64/www/planificacion-academica/public/profesor/perfil.php",
+		"/C/Users/zookid/Downloads/ENSAYO.md",
+		"/C/wamp64/www/planificacion-academica/public/admin/navbar.php",
+		"/E/Buenas tardes muchach@s espero estén bien y trabaj",
+		"/C/wamp64/www/planificacion-academica/public/profesor/index.php",
+		"/C/wamp64/www/planificacion-academica/public/custom.css",
+		"/C/wamp64/www/planificacion-academica/public/estudiante/index.php",
+		"/C/wamp64/www/planificacion-academica/public/admin/profesor_crear.php"
+	],
+	"find":
+	{
+		"height": 55.0
+	},
+	"find_in_files":
+	{
+		"height": 130.0,
+		"where_history":
+		[
+			"C:\\Users\\zookid\\Downloads\\proyectoSII\\presentacion\\previews\\asasa",
+			"C:\\Users\\zookid\\Downloads\\presentacion\\previews",
+			"C:\\Users\\zookid\\Downloads\\clinica",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"newTask",
+			"newtas",
+			"newTask",
+			"v-model=\"newTask\"",
+			"db.get",
+			"disabled",
+			"lilith",
+			",",
+			".",
+			":",
+			": ",
+			"loglines",
+			"MyNumber",
+			"myNumber",
+			"MyNumber",
+			"myNumber",
+			"MyNumber",
+			"myNumber",
+			"addOne",
+			"myNumber",
+			"callback",
+			"addOne",
+			"estudiante",
+			"estudiante_seccion",
+			"seccion",
+			"seccion_estudiante",
+			"IDE",
+			"conclusion",
+			"10%",
+			"<body>",
+			"300",
+			"0",
+			"\n\t  ",
+			"Descripcion Casos de uso: Pedir cita",
+			"desplie",
+			"descripcion1",
+			"Descripcion Casos de uso: Pedir cita",
+			"eventos",
+			"modelado",
+			"<div class=\"navbar\">\n          <ul>\n            <li><a href=\"#planteamiento\">Planteamiento</a></li>\n            <li><a href=\"#metodologia\">Metodología</a></li>\n            <li id=\"current\"><a href=\"#resultado\">Resultados</a></li>\n            <li><a href=\"#conclusion\">Conclusiones</a></li>\n            <li><a href=\"#recomendacion\">Recomendaciones</a></li>\n          </ul>\n        </div>",
+			"integracion",
+			"<img src=\"images/logo.gif\">",
+			"interfaces",
+			"conclusion",
+			"<!--",
+			"recomendacion",
+			"programacion",
+			"patrondediseño",
+			"padding",
+			"entidadrelacion",
+			"Entidad relación",
+			"entidadrelacion",
+			"Entidad relación",
+			"SQL",
+			"sql",
+			"SQL",
+			"basededatos",
+			"entidadrelacion",
+			"diagramadecomponentes",
+			"despliegue",
+			"funcionales",
+			"3",
+			" id=\"metodologia\"",
+			"simple.css",
+			"#5a72e8",
+			"serif.css",
+			" id=\"portada\"",
+			"white.css",
+			"moon.css",
+			"plugin",
+			"clases",
+			"diagrama de clases",
+			"<li>",
+			"El pa",
+			"El u",
+			"d<li>el",
+			"El s",
+			"el s",
+			"El s",
+			"el s",
+			"El s",
+			"El ",
+			"el ",
+			"El ",
+			"el ",
+			"El ",
+			"el ",
+			"El ",
+			"el ",
+			"El ",
+			"el ",
+			"El ",
+			"el ",
+			"El ",
+			"el ",
+			"El ",
+			"el ",
+			"El ",
+			"-",
+			"Actores",
+			"actor",
+			"Objetivos",
+			"p",
+			".html",
+			"table",
+			"<span>",
+			"<br>",
+			"label class=\"checkbox\"",
+			"button",
+			"<span class=\"tooltiptext\">Tooltip text</span>",
+			"4",
+			"30px",
+			"0.2",
+			"2",
+			".tooltip",
+			"l1",
+			"l",
+			"DENTISALUD",
+			"p",
+			"salir",
+			"<p class=\"menu-label\">\n        <a class=\"none\" href=\"doctor-login.html\">\n          <i class=\"fa fa-power-off\" aria-hidden=\"true\"></i> Salir \n        </a>\n      </p>",
+			"small",
+			"40",
+			" is-narrow",
+			"column",
+			"mini-card ",
+			"half",
+			"p>"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<body class=\"preview\">",
+			"white.css",
+			"simple.css",
+			"serif.css",
+			"white.css",
+			"IPASME"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/components/List.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4533,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2067,
+								2067
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"syntax": "Packages/Vue Syntax Highlight/vue.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1154.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 704,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								173,
+								173
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/predawn.tmTheme",
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "to-do.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 180.0,
+	"status_bar_visible": false,
+	"template_settings":
+	{
+	}
+}

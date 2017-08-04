@@ -11,17 +11,18 @@
     </section>
 
       <ul class="list">
-      <draggable :list="taskList" :options="{group:'taskList'}" :move="dragStart(added)" v-model="taskList">
+      <draggable :list="taskList" :options="{group:'taskList'}" @end="doneDrag=true" :move="dragStart" v-model="taskList">
         <li v-for="task in taskList" v-bind:class="{done: task.checked}" :key="task.id" class="task">
+          <label for="check" class="what">
           <input type="checkbox" class="checkbox" v-model="task.checked"
-          v-on:click="checkTask(task)">
-          <label for="checkbox">
+          v-on:click="checkTask(task)" id="check">
           <!--
             <input type="text" :value="task.text" class="singleTask" :disabled="!task._editting">
           -->
+              {{ task.position }}
+            </label>  
             <input type="text" :value="task.text" class="singleTask" v-on:keyup.enter="editTask(task)"
             :disabled="task.checked" v-model="task.text">
-          </label>
           <!--
           <button class="edit" v-on:click="editTask(task)" v-if="!task.checked">
             editar
@@ -50,7 +51,10 @@ export default {
     return {
       loading: true,
       newTask: '',
-      taskList: []
+      taskList: [],
+      currentPosition: null,
+      newPosition: null,
+      doneDrag: false
     }
   },
   mounted () {
@@ -58,58 +62,27 @@ export default {
   },
   methods: {
 
-    dragStart (evt) {
-      //var indice = index.draggedContext.taskList.task
-      //var indice = this.taskList.indexOf(task)
-      //console.log(indice)
-      //var futureIndex = this.targetElement = evt.relatedContext.element
-      var futureIndex = evt.draggedContext.element
-      var index = this.taskList.indexOf(futureIndex)
-      //console.log(index)
-      console.log(index)
-    },
-
-    dragEnd(){
-      console.log("end")
-    },
-    
     getTasks () {
       db.allDocs({include_docs: true}, (err, response) => {
         if (err) {
           throw err
         }
-        console.log(response)
-        this.taskList = response.rows.map(e => e.doc)
-        console.log(this.taskList)
+        //console.log(response)
+        this.taskList = response.rows.map(e => e.doc).sort( (a, b) => a.position > b.position )
         this.loading = false
       })
     },
 
-    editTask (task) {
-      //this.$set(task, '_editting', true)
-      db.get(task._id).then(function(originalTask){
-        task._rev = originalTask._rev
-        return db.put(task);
-      }).then(function(response){
-        console.log("editado")
-      }).catch(function (err){
-        console.log(err)
-      })
-    },
-
-    checkTask (task) {
-      var index = this.taskList.indexOf(task)
-      db.put(task)
-    },
-
     addTask () {
       var task = this.newTask.trim()
+      var number = this.taskList.length
       if (!task) {
         return
       }
       db.post({
         text: task,
-        checked: false
+        checked: false,
+        position: number
       }, () => {
         this.newTask = ''
         this.loading = true
@@ -125,6 +98,48 @@ export default {
       db.remove(task)
       this.taskList.splice(index, 1)
       console.log("removed")
+    },
+
+    editTask (task) {
+      //this.$set(task, '_editting', true)
+      db.get(task._id).then(function(originalTask){
+        task._rev = originalTask._rev
+        return db.put(task);
+      }).then(function(response){
+        console.log("editado")
+      }).catch(function (err){
+        console.log(err)
+      })
+    },
+    
+    dragStart (evt) {
+      //var indice = index.draggedContext.taskList.task
+      var newPosition = this.targetElement = this.taskList.indexOf(evt.relatedContext.element)
+      var task = evt.relatedContext.element
+      var currentPosition = this.taskList.indexOf(evt.draggedContext.element)
+      //console.log("current position: "+currentPosition+" - id: "+task._id)
+      //console.log("new position: "+newPosition)
+      
+      db.get(task._id).then(function(originalTask) {
+        //task._rev = originalTask._rev
+        return db.put({
+          text: task.text,
+          checked: task.checked,
+          _id: task._id,
+          _rev: originalTask._rev,
+          position: 0
+        });
+      }).then(function(response){
+        console.log("editado")
+      }).catch(function (err){
+        console.log(err)
+      })
+      
+    },
+
+    checkTask (task) {
+      var index = this.taskList.indexOf(task)
+      db.put(task)
     },
 
     clearList () {
@@ -179,7 +194,6 @@ export default {
   li {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     list-style-type: none;
     padding: 10px 20px 10px 60px;
     border-bottom: 2px solid #F9F9F9;
@@ -188,8 +202,9 @@ export default {
 
   .text-input {
     border: 2px solid lightblue;
-    padding: 10px 5px;
-    width: 85%;
+    padding: 5px 5px;
+    margin: 0px 25px;
+    width: 80%;
     height: 35px;
     color: black;
     font-size: 36px;
@@ -220,11 +235,11 @@ export default {
 
   .list label {
     display: inline-block;
-    width: 85%;
     font-size: 18px;
     line-height: 24px;
     z-index: 2;
     overflow: hidden;
+    color: #555;
   }
 
   .list li.done input {
@@ -232,10 +247,11 @@ export default {
   }
 
   .list input[type=text]{
-    width: 100%;
     padding-left: 10px;
+    margin-left: 10px;
+    width: 85%;
     border-style: none;
-    color: #555;
+    color: black;
     font-size: 16px;
     font-weight: bold;
     font-family: 'Nunito', sans-serif;
@@ -252,6 +268,17 @@ export default {
       width: 90%;
       max-width: 90%;
     }
+  }
+
+  @media screen and (max-width: 670px) {
+    .container {
+      width: 90%;
+      max-width: 90%;
+    }
+
+    .list input[type=text]{}
+
+    .list label {}
   }
 
 </style>

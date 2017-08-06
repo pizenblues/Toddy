@@ -11,7 +11,7 @@
     </section>
 
       <ul class="list">
-      <draggable :list="taskList" :options="{group:'taskList'}" @end="doneDrag=true" :move="dragStart" v-model="taskList">
+      <draggable :list="taskList" :options="{group:'taskList'}" v-model="taskList" :move="dragStart">
         <li v-for="task in taskList" v-bind:class="{done: task.checked}" :key="task.id" class="task">
           <label for="check" class="what">
           <input type="checkbox" class="checkbox" v-model="task.checked"
@@ -19,8 +19,8 @@
           <!--
             <input type="text" :value="task.text" class="singleTask" :disabled="!task._editting">
           -->
-              {{ task.position }}
             </label>  
+              <input type="text" v-model="task.position">
             <input type="text" :value="task.text" class="singleTask" v-on:keyup.enter="editTask(task)"
             :disabled="task.checked" v-model="task.text">
           <!--
@@ -61,6 +61,16 @@ export default {
     this.getTasks()
   },
   methods: {
+
+    start (){
+
+      var oldPosition = this.taskList.indexOf(draggedContext.element)
+      var newPosition = this.taskList.indexOf(evt.relatedContext.element)
+      var oldPositionElement = evt.draggedContext.element
+      var newPositionElement = evt.relatedContext.element
+
+      console.log(oldPosition)
+    },
 
     getTasks () {
       db.allDocs({include_docs: true}, (err, response) => {
@@ -114,27 +124,43 @@ export default {
     
     dragStart (evt) {
       //var indice = index.draggedContext.taskList.task
-      var newPosition = this.targetElement = this.taskList.indexOf(evt.relatedContext.element)
-      var task = evt.relatedContext.element
-      var currentPosition = this.taskList.indexOf(evt.draggedContext.element)
-      //console.log("current position: "+currentPosition+" - id: "+task._id)
-      //console.log("new position: "+newPosition)
-      
-      db.get(task._id).then(function(originalTask) {
-        //task._rev = originalTask._rev
+      //var newPosition = this.targetElement = this.taskList.indexOf(evt.relatedContext.element)
+      var oldPosition = this.taskList.indexOf(evt.draggedContext.element)
+      var newPosition = this.taskList.indexOf(evt.relatedContext.element)
+
+      var oldPositionElement = evt.draggedContext.element
+      var newPositionElement = evt.relatedContext.element
+      //ahora usando esta mierda larguisima funciona, el problema
+      //es que :move es llamado CADA VEZ que se mueva el cuadrito draggable
+      db.get(oldPositionElement._id).then(function(originalTask){
+        oldPositionElement._rev = originalTask._rev
         return db.put({
-          text: task.text,
-          checked: task.checked,
-          _id: task._id,
-          _rev: originalTask._rev,
-          position: 0
+          text: oldPositionElement.text,
+          checked: oldPositionElement.checked,
+          position: newPosition,
+          _id: oldPositionElement._id,
+          _rev: originalTask._rev
         });
       }).then(function(response){
-        console.log("editado")
+        db.get(newPositionElement._id).then(function(originalOldTask){
+          newPositionElement._rev = originalOldTask._rev
+          return db.put({
+            text: newPositionElement.text,
+            checked: newPositionElement.checked,
+            position: oldPosition,
+            _id: newPositionElement._id,
+            _rev: originalOldTask._rev
+          });
+        }).then(function(response){
+          console.log("edited")
+        }).catch(function (err){
+          console.log(err)
+        })
       }).catch(function (err){
         console.log(err)
       })
-      
+      //sheet, it worked, but its awfully long
+      //no funciono, repite la posicion
     },
 
     checkTask (task) {
